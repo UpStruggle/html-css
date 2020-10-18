@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*通配符---给所有元素配置样式*/
+      * {
+        color: lightcoral;
+      }
+      /*选择器 {样式}*/
+      /*给谁改样式{改什么样式}*/
+      .blue {
+        width: 100px;
+        height: 100px;
+        background: blue;
+      }
+
+      .red {
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+      p {
+        font-family: inherit;
+      }
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      div {
+        color: pink;
+        /*color用于定义文本的颜色，属性值有三种形式：预定义的颜色值：blue等；十六进制：#00FF00等；RGB代码：rgb(255,0,0)等*/
+        /*常用的是十六进制*/
+        text-align: center;
+        /*用于设置文本对齐方式，只能设置水平方向的对齐方式 left right center*/
+        text-decoration: underline;
+        /*用于装饰文本，给文本添加线：underline（下划线） overline(上划线） none(无）line-through(删除线) */
+        /*text-decoration:none 常用于删除下划线，一般用于取消链接中的下划线*/
+        text-indent: 20px;
+        /*用于指定文本第一行的缩进，常用于段落的缩进 （注意，只缩进首行）*/
+        /*也可用 em 单位（相对大小），一个em是一个当前文字的大小*/
+        line-height: 16px;
+        /*用于设置文本的行间距，可以控制文本行与行之间的距离*/
+        /*数值包括文本的高度和上间距，下间距的高度，即：数值=文本告+上间距+下间距*/
+      }
+    </style>
+  </head>
+  <body>
+    <p class="red">感谢您</p>
+
+    <div class="blue">蓝色</div>
+    <div style="color: lightblue; font-size: 12px">红色</div>
+
+    <form method="POST" name="注册页面">
+      <h4>白晨暮辞无别时</h4>
+      <label for="sex">性别:</label>
+      <input type="radio" checked="checked" id="sex" value="男" />
+      <input type="radio" id="sex" value="女" /> <br />
+      生日： <input type="date" /> 请选择 <br />
+      所在地区：<select>
+        <option selected="selected">北京</option>
+        <option>上海</option>
+        <option>广东</option></select
+      ><br />
+      <label for="marry">婚姻状况：</label>
+      <input type="radio" checked="checked" id="marry" /> 未婚
+      <input type="radio" id="sex" />已婚
+      <input type="radio" id="sex" />离婚<br />
+      自我介绍： <textarea rows="6" cols="15"></textarea> <br />
+      <input type="submit" value="免费注册" /><br />
+      <input type="file" />
+      <input type="checkbox" value="我同意加入" checked="checked" /><br />
+      <a href="http://www.ahut.edu.cn">我是会员，立即加入</a><br />
+      <dl>
+        <dt>我承诺</dt>
+        <ul>
+          <dd><li>年满18</li></dd>
+          <dd><li>真诚</li></dd>
+          <dd><li>严肃</li></dd>
+        </ul>
+      </dl>
+    </form>
+  </body>
+</html>

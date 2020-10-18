@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>定位 淘宝轮播图</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .tb-promo {
+        position: relative;
+        width: 520px;
+        height: 280px;
+        margin: 100px auto;
+      }
+
+      .tb-promo img {
+        width: 520px;
+        height: 280px;
+      }
+
+      /* 并集选择器可以集体声明相同的样式 */
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        width: 20px;
+        height: 30px;
+        background-color: rgb(0, 0, 0, 0.3);
+        /* 加了绝对定位的盒子可以直接设置高度和宽度 */
+        text-align: center;
+        line-height: 30px;
+        text-decoration: none;
+        color: seashell;
+      }
+
+      .prev {
+        left: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+
+      .next {
+        /* 如果一个盒子既有left属性也有right属性，则会默认执行Left属性 */
+        right: 0;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+
+      .promo-nav {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        margin-left: -35px;
+        width: 70px;
+        height: 15px;
+        background-color: rgb(255, 255, 255, 0.3);
+        border-radius: 7px;
+      }
+
+      li {
+        list-style: none;
+      }
+      .promo-nav li {
+        float: left;
+        width: 8px;
+        height: 8px;
+        margin: 3px;
+        border-radius: 50%;
+        background-color: seashell;
+      }
+
+      .promo-nav .selected {
+        background-color: rgb(219, 100, 31);
+      }
+
+      .tudou {
+        position: relative;
+        width: 444px;
+        height: 320px;
+        background-color: rgb(226, 175, 175);
+        margin: 30px auto;
+      }
+
+      .tudou img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .mask {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0, 0.3) url(images/search_06.png) no-repeat center;
+      }
+      /* 当鼠标经过时，让里面的遮罩层显示出来 */
+      .tudou:hover .mask {
+        /* 显示元素 */
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tb-promo">
+      <img src="images/img1.jpg" alt="" />
+      <a href="#" class="prev">&lt</a>
+      <a href="#" class="next">&lt</a>
+      <ul class="promo-nav">
+        <li></li>
+        <li></li>
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="tudou">
+      <div class="mask"></div>
+      <img src="images/img1.jpg" alt="" />
+    </div>
+  </body>
+</html>
